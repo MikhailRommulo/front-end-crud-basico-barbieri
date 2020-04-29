@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud Produto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input type="number" id="codigo" /> 
+    <button id="btn-codigo">pegar por código</button> 
+    <button id="btn-todos">pegar todos</button>
+    <button id="btn-cadastro">cadastrar</button>
+
+    <table>
+        <tr>
+            <th>Código</th>
+            <th>Descrição</th>
+            <th>Preço</th>
+            <th>Saldo</th>
+            <th>Unidade</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </table>
+    <div class="cadastro-alteracao">
+        <div id="formulario">
+            <input type="hidden" id="fcodigo">
+            <label>Descrição:</label><button id="btn-close">Fechar</button><br>
+            <input type="text" id="fdescricao"><br>
+            <label>Unidade:</label><br>
+            <input type="text" id="funidade"><br>
+            <label>Preço:</label><br>
+            <input type="number" id="fpreco"><br>
+            <label>Saldo:</label><br>
+            <input type="number" id="fsaldo"><br>
+            <button id="btn-send">Cadastrar</button>
+            <p id="form-resultado"></p>
+        </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/resources.js"></script>
+    <script src="js/gets.js"></script>
+    <script src="js/post.js"></script>
+    <script src="js/delete.js"></script>
+</body>
+</html>
