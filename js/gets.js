@@ -34,12 +34,20 @@ function listProducts(lista) {
             cell.innerText = p[key]
             row.appendChild(cell)
         }
-        let cell = document.createElement('td')
-        let btn = document.createElement('button')
-        btn.innerText = 'excluir'
-        btn.setAttribute('onclick', `deleteOne(${p.codigo})`)
-        cell.appendChild(btn)
-        row.appendChild(cell)
+        let cellE = document.createElement('td')
+        let btnE = document.createElement('button')
+        btnE.innerText = 'excluir'
+        btnE.setAttribute('onclick', `deleteOne(${p.codigo})`)
+        cellE.appendChild(btnE)
+        row.appendChild(cellE)
+
+        let cellA = document.createElement('td')
+        let btnA = document.createElement('button')
+        btnA.innerText = 'alterar'
+        btnA.setAttribute('onclick', `enablePut(${JSON.stringify(p)})`)
+        cellA.appendChild(btnA)
+        row.appendChild(cellA)
+
         table.appendChild(row)
     }
 }
@@ -55,6 +63,20 @@ function oneProduct(product){
         cell.innerText = product[key]
         row.appendChild(cell)
     }
+    let cellE = document.createElement('td')
+    let btnE = document.createElement('button')
+    btnE.innerText = 'excluir'
+    btnE.setAttribute('onclick', `deleteOne(${product.codigo})`)
+    cellE.appendChild(btnE)
+    row.appendChild(cellE)
+
+    let cellA = document.createElement('td')
+    let btnA = document.createElement('button')
+    btnA.innerText = 'alterar'
+    btnA.setAttribute('onclick', `enablePut(${JSON.stringify(product)})`)
+    cellA.appendChild(btnA)
+    row.appendChild(cellA)
+
     table.appendChild(row)
 }
 

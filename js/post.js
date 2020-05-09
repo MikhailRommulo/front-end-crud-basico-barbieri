@@ -6,12 +6,19 @@ function visibleForm() {
         'align-items: center;'+
         'justify-content: center;'
     )
+
+    btnSend.innerText = "Cadastrar"
+    btnSend.setAttribute(`onclick`, `postProduct()`)
+
+    formResu.innerText = ''
 }
 
 function closeForm() {
     var areaPost = document.querySelector('.cadastro-alteracao')
 
     areaPost.setAttribute('style', 'display: none')
+
+    clearFields()
 }
 
 function postProduct() {
@@ -23,6 +30,8 @@ function postProduct() {
   var formPrec = document.querySelector('#fpreco').value
 
   var formSald = document.querySelector('#fsaldo').value
+
+  document.querySelector('#fcodigo').value = ''
    
     var body = {
         descricao: formDesc, 
@@ -39,4 +48,16 @@ function postProduct() {
       .catch(function (error) {
         console.log(error)
       })
+}
+
+function clearFields(){
+
+  document.querySelector('#fdescricao').value = ''
+
+  document.querySelector('#funidade').value = ''
+
+  document.querySelector('#fpreco').value = ''
+
+  document.querySelector('#fsaldo').value = ''
+
 }
