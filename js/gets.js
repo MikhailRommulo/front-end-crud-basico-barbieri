@@ -36,6 +36,7 @@ function listProducts(lista) {
         }
         let cell = document.createElement('td')
         let btn = document.createElement('button')
+        btn.innerText = 'excluir'
         btn.setAttribute('onclick', `deleteOne(${p.codigo})`)
         cell.appendChild(btn)
         row.appendChild(cell)

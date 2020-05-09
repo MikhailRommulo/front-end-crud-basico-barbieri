@@ -17,4 +17,4 @@ var formResu = document.querySelector('#form-resultado')
 
 // var url = 'http://localhost:8801/produtos'
 
-var url = 'https://crud-basico-barbieri.herokuapp.com'
+var url = 'https://crud-basico-barbieri.herokuapp.com/produtos'
